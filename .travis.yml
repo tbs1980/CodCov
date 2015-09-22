@@ -12,7 +12,8 @@ script:
     - $CXX --version
     - make
     - ./Hello/hello
-#    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
+    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
+    - ls -la
 
 #after_success:
 #    - bash <(curl -s https://codecov.io/bash)
