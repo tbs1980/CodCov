@@ -1,0 +1,18 @@
+language: cpp
+
+compiler:
+    - gcc
+
+before_install:
+    - echo $LANG
+
+before_script: cmake CMakeLists.txt
+
+script:
+    - $CXX --version
+    - make
+    - ./Hello/hello
+    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
+
+#after_success:
+#    - bash <(curl -s https://codecov.io/bash)
