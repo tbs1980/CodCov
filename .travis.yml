@@ -15,7 +15,9 @@ script:
 #    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
 #    - ls -la
     - make testCalculator
+    - Calculator/testCalculator
     - gcov Calculator/testCalculator --object-directory=Calculator/CMakeFiles/testCalculator.dir/testCalculator.cpp.gcno
+    - ls -la
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
