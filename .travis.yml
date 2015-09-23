@@ -10,10 +10,12 @@ before_script: cmake CMakeLists.txt
 
 script:
     - $CXX --version
-    - make
-    - ./Hello/hello
-    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
-    - ls -la
+#    - make hello
+#    - ./Hello/hello
+#    - gcov Hello/hello --object-directory=./Hello/CMakeFiles/hello.dir/hello.cpp.gcno
+#    - ls -la
+    - make testCalculator
+    - gcov Calculator/testCalculator --object-directory=Calculator/CMakeFiles/testCalculator.dir/testCalculator.cpp.gcno
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
