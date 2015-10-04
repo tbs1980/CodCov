@@ -24,6 +24,16 @@ public:
     {
         return a/b;
     }
+
+    static scalarType abs(scalarType const a)
+    {
+        if(a<scalarType(0))
+        {
+            return -a;
+        }
+
+        return a;
+    }
 };
 
 #endif //CALCULATOR_HPP

@@ -6,5 +6,11 @@ int main(void)
     {
         return 1;
     }
+
+    if( calculator<double>::abs(double(-1.)) != double(1.) )
+    {
+        return 1;
+    }
+
     return 0;
 }
