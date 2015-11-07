@@ -20,4 +20,4 @@ script:
     - ls -la
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -u https://codecov-staging.herokuapp.com -d
